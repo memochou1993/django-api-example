@@ -3,9 +3,11 @@ from rest_framework import viewsets, status
 from rest_framework.response import Response
 from .serializers import ArticleSerializer
 from django.shortcuts import get_object_or_404
+from rest_framework.permissions import IsAuthenticated
 
 # Create your views here.
 class ArticleViewSet(viewsets.ModelViewSet):
+    permission_classes = [IsAuthenticated]
     serializer_class = ArticleSerializer
     queryset = Article.objects.all()
 
