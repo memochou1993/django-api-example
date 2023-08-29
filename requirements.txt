@@ -1,4 +1,4 @@
 django
 djangorestframework
 djangorestframework-simplejwt
-pymysql
+psycopg2-binary
