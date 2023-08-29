@@ -10,7 +10,7 @@ services:
     volumes:
       - .:/var/www
     ports:
-      - "80:8000"
+      - "8000:8000"
     networks:
       - backend
 
@@ -25,9 +25,9 @@ services:
     networks:
       - backend
     environment:
-      POSTGRES_DB: article_api
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: root
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
 
 networks:
   backend:
