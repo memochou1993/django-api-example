@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "docs:build": "redocly bundle docs/openapi.yaml --output static/docs/spec.json --ext json",
+    "docs:watch": "nodemon --watch docs/openapi.yaml -x \"npm run docs:build\"",
+    "docs:serve": "live-server static/docs"
+  },
+  "devDependencies": {
+    "@redocly/cli": "^1.0.2",
+    "live-server": "^1.2.2",
+    "nodemon": "^3.0.1"
+  }
+}
